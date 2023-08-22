@@ -16,8 +16,15 @@ struct ContentView: View {
                 if !viewModel.meals.isEmpty {
                     ForEach(viewModel.meals) { meal in
 
-                        NavigationLink(destination: Text(meal.strMeal)) {
-                            HStack {Text(meal.strMeal)
+                        NavigationLink(destination: MealDetailView(mealId: meal.idMeal, mealStr: meal.strMeal)) {
+                            HStack {
+
+                                AsyncImage(url: URL(string: meal.strMealThumb)) { image in
+                                    image.image?.resizable()
+                                }
+                                .frame(width: 128, height: 128)
+
+                                Text(meal.strMeal)
                                     .font(.title)
                                     .padding()
                             }
@@ -29,8 +36,8 @@ struct ContentView: View {
                 }
 
             }
+            .navigationBarTitle("Meal Details", displayMode: .large)
         }
-        .navigationBarTitle("Meal Details", displayMode: .large)
         .alert(viewModel.errorMessage, isPresented: $viewModel.presentAlert) {
 
         }
@@ -42,13 +49,8 @@ struct ContentView: View {
 }
 
 extension ContentView {
-    class Model: ObservableObject {
+    class Model: ViewModel {
         @Published var meals = [Meal]()
-        @Published var errorMessage: String = ""
-        @Published var presentAlert: Bool = false
-        private lazy var networkManager = {
-            NetworkManager.shared
-        }()
 
         @MainActor
         func fetchMeals() async {

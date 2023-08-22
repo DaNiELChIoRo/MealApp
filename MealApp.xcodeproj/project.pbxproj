@@ -16,6 +16,8 @@
 		E17284802A95103B00EDF505 /* MealAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E172847F2A95103B00EDF505 /* MealAppUITestsLaunchTests.swift */; };
 		E172848E2A95105100EDF505 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E172848D2A95105100EDF505 /* Meal.swift */; };
 		E17284912A95115C00EDF505 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17284902A95115C00EDF505 /* NetworkManager.swift */; };
+		E17284952A95339300EDF505 /* MealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17284942A95339300EDF505 /* MealDetailView.swift */; };
+		E17284982A95348E00EDF505 /* ViewModelable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17284972A95348E00EDF505 /* ViewModelable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E172848D2A95105100EDF505 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		E17284902A95115C00EDF505 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E17284922A95240800EDF505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		E17284942A95339300EDF505 /* MealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailView.swift; sourceTree = "<group>"; };
+		E17284972A95348E00EDF505 /* ViewModelable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +103,12 @@
 		E17284612A95103A00EDF505 /* MealApp */ = {
 			isa = PBXGroup;
 			children = (
+				E17284962A95348500EDF505 /* ViewModels */,
+				E17284932A95338200EDF505 /* Views */,
 				E17284922A95240800EDF505 /* Info.plist */,
 				E172848F2A95114C00EDF505 /* Network */,
 				E172848C2A95104A00EDF505 /* Models */,
 				E17284622A95103A00EDF505 /* MealAppApp.swift */,
-				E17284642A95103A00EDF505 /* ContentView.swift */,
 				E17284662A95103B00EDF505 /* Assets.xcassets */,
 				E17284682A95103B00EDF505 /* Preview Content */,
 			);
@@ -149,6 +154,23 @@
 				E17284902A95115C00EDF505 /* NetworkManager.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E17284932A95338200EDF505 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E17284642A95103A00EDF505 /* ContentView.swift */,
+				E17284942A95339300EDF505 /* MealDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E17284962A95348500EDF505 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				E17284972A95348E00EDF505 /* ViewModelable.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,9 +303,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17284982A95348E00EDF505 /* ViewModelable.swift in Sources */,
 				E17284912A95115C00EDF505 /* NetworkManager.swift in Sources */,
 				E17284652A95103A00EDF505 /* ContentView.swift in Sources */,
 				E172848E2A95105100EDF505 /* Meal.swift in Sources */,
+				E17284952A95339300EDF505 /* MealDetailView.swift in Sources */,
 				E17284632A95103A00EDF505 /* MealAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

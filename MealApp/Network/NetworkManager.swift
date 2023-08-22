@@ -45,7 +45,7 @@ class NetworkManager {
     }
 
     func fetchMealDetails(for mealID: String) async throws -> Meal {
-        let endpoint = baseEndpoint + "/lookup.php?1=\(mealID)"
+        let endpoint = baseEndpoint + "/lookup.php?i=\(mealID)"
         if let url = URL(string: endpoint) {
             do {
                 let (data, urlResponse) = try await URLSession.shared.data(from: url)
