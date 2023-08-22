@@ -14,6 +14,8 @@
 		E17284742A95103B00EDF505 /* MealAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17284732A95103B00EDF505 /* MealAppTests.swift */; };
 		E172847E2A95103B00EDF505 /* MealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E172847D2A95103B00EDF505 /* MealAppUITests.swift */; };
 		E17284802A95103B00EDF505 /* MealAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E172847F2A95103B00EDF505 /* MealAppUITestsLaunchTests.swift */; };
+		E172848E2A95105100EDF505 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E172848D2A95105100EDF505 /* Meal.swift */; };
+		E17284912A95115C00EDF505 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17284902A95115C00EDF505 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		E17284792A95103B00EDF505 /* MealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E172847D2A95103B00EDF505 /* MealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITests.swift; sourceTree = "<group>"; };
 		E172847F2A95103B00EDF505 /* MealAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E172848D2A95105100EDF505 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		E17284902A95115C00EDF505 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E17284922A95240800EDF505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,9 @@
 		E17284612A95103A00EDF505 /* MealApp */ = {
 			isa = PBXGroup;
 			children = (
+				E17284922A95240800EDF505 /* Info.plist */,
+				E172848F2A95114C00EDF505 /* Network */,
+				E172848C2A95104A00EDF505 /* Models */,
 				E17284622A95103A00EDF505 /* MealAppApp.swift */,
 				E17284642A95103A00EDF505 /* ContentView.swift */,
 				E17284662A95103B00EDF505 /* Assets.xcassets */,
@@ -125,6 +133,22 @@
 				E172847F2A95103B00EDF505 /* MealAppUITestsLaunchTests.swift */,
 			);
 			path = MealAppUITests;
+			sourceTree = "<group>";
+		};
+		E172848C2A95104A00EDF505 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E172848D2A95105100EDF505 /* Meal.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E172848F2A95114C00EDF505 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E17284902A95115C00EDF505 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E17284912A95115C00EDF505 /* NetworkManager.swift in Sources */,
 				E17284652A95103A00EDF505 /* ContentView.swift in Sources */,
+				E172848E2A95105100EDF505 /* Meal.swift in Sources */,
 				E17284632A95103A00EDF505 /* MealAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,11 +446,12 @@
 				DEVELOPMENT_TEAM = 2H5BUZ62Y4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +476,12 @@
 				DEVELOPMENT_TEAM = 2H5BUZ62Y4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
