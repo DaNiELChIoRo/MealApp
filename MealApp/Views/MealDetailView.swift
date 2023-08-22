@@ -18,22 +18,28 @@ struct MealDetailView: View {
             if let meal = viewModel.meal {
                 AsyncImage(url: URL(string: meal.strMealThumb), scale: 2)
                 VStack(alignment: .leading) {
-                    Text("Instructions")
-                        .font(.title)
+                    if let instructions = meal.strInstructions {
+                        Text("Instructions")
+                            .font(.title)
 
-                    Text(meal.strInstructions ?? "")
+                        Text(instructions)
+                    }
 
                     Spacer()
 
                     Text("Ingredients")
                         .font(.title)
-
-                    Text(meal.strIngredient1 ?? "")
+                    ForEach(meal.ingredients, id: \.self) { ingredient in
+                        Text(" - " + ingredient)
+                    }
 
                     Spacer()
 
                     Text("Measurements")
                         .font(.title)
+                    ForEach(meal.measurements, id: \.self) { measurements in
+                        Text(" - " + measurements)
+                    }
                 }
 
             } else {
