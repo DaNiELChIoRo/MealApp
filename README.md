@@ -9,6 +9,10 @@ Simple iOS MealApp Implementing network calls from `themealdb.com` API that allo
 
 <img width=320 src="https://github.com/DaNiELChIoRo/MealApp/assets/39627096/2df428b6-af24-454a-87d4-4a6307a0ffcb"/>
 
+#### Video
+
+https://github.com/DaNiELChIoRo/MealApp/assets/39627096/fca1bc28-f735-4157-ad41-5c01f4eeb109
+
 ## Networking
 
 For networking the app uses *async/await* Swift Concurrency.
