@@ -72,7 +72,8 @@ extension Meal {
         for attr in mirror.children {
             if let attribute = attr.label,
                attribute.contains("Ingredient"),
-               let value = attr.value as? String, !value.isEmpty {
+               let value = attr.value as? String,
+                !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 ingredients.append(value)
             }
         }
@@ -85,7 +86,8 @@ extension Meal {
         for attr in mirror.children {
             if let attribute = attr.label,
                attribute.contains("Measure"),
-               let value = attr.value as? String, !value.isEmpty {
+               let value = attr.value as? String,
+               !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
                 measurements.append(value)
             }
         }
